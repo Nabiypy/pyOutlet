@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+        <div class="jumbotron jumbotron-material-brown-200">
+            <h1 class="text-center"><i class="fa fa-map-marker fa-2x"></i> Contact</h1>
+        </div>
+    
+
+<!-- Contact Us -->
+    <div class="row">
+        <div class="col-md-6">
+            <h3><span class="glyphicon glyphicon-user"></span> LeadAfrique International</h3>
+                <address>
+                    <strong>Laus Deo House, #26 Worship Street,</strong> <br>
+                    Adentan Housing Down <br>
+                    Box CT 7509 Cantonments, Accra <br> 
+                    Ghana  <br>
+                    <abbr title="Telephone home"><span class="glyphicon glyphicon-earphone"></span> Tel:</abbr>
+                    (+233) 302-540-387 <br>
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                    Moble: (+233) 244-368-092 <br>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:joe@example.com?subject=Love word" "email me">ask@leadafrique.net</a>
+                    </address>
+
+         </div>
+         <div class="col-md-6">
+            <!-- contact form -->
+                    <h3><i class="mdi-communication-quick-contacts-mail"></i> Contact Form</h3>
+                    <form ng-submit="postTask(task)" class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label for="inputName3" class="col-sm-3 control-label">Your name:</label>
+                        <div class="col-sm-9">
+                          <input type="text" ng-model="task.name" class="form-control" id="inputName3" placeholder="e.g. Michel Corn " required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">Email:</label>
+                        <div class="col-sm-9">
+                          <input type="email" ng-model="task.email" class="form-control" id="inputEmail3" placeholder="e.g. yourname@leadafrique.net" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputMessage" class="col-sm-3 control-label">Your Message:</label>
+                        <div class="col-sm-9">
+                          <textarea  ng-model="task.message"class="form-control" rows="3" placeholder="Please write your message here..." required></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+
+                          <input type="submit" value="Post" class="btn btn-warning btn-xs" />
+                        </div>
+                      </div>
+                    </form><!-- end contact form -->
+          </div>
+
+        
+        <div class="row">
+             <div class="col-md-6">
+                <h3>Follow Us here <i class="fa fa-long-arrow-down"></i></h3>
+                    <ul class="list-inline">
+                              
+                        <li><a href="#"><i class="fa fa-google-plus-square fa-2x"></i>  <h5>google &plus;</h5></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-official fa-2x" ></i>  <h5>facebook</h5></a></li>
+                        <li><a href="https://www.twitter.com/ohene-effah"><i class="fa fa-twitter-square fa-2x"></i>  <h5>twitter</h5></a></li>
+                        <li><a href="https://www.skype.com/ohene-effah"><i class="fa fa-skype fa-2x"></i>  <h5>skype</h5></a></li>
+                    </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                      <li><h5>{{task.name}}</h5></li>
+                      <li><h5>{{task.email}}</h5></li>
+                      <li><h5>{{task.message}}</h5></li>
+                    </ul>
+                
+              </div>
+                    
+        </div>
+         
+    </div>
+</div>

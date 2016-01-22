@@ -1,0 +1,125 @@
+    <!-- render browse page title -->
+<div class="row">
+    <div class="jumbotron jumbotron-material-orange">
+        <h1 class="text-center"><i class="fa fa-briefcase fa-2x"></i> Browse Posts</h1>
+    </div>
+</div><br>
+
+<!-- list posted tasks -->
+<div class="container">
+
+  <div class="row">
+    <!-- LEFT PANEL -->
+    	<div class="col-md-offset-1 col-md-4 col-sm-4">
+
+    		<div class="list-group">
+    				<!-- SEARCH TOOL -->
+    				<div class="form-group">
+    					<div class="input-group">
+    						<div class="input-group-addon">
+    							<span class="fa fa-search fa-2x" aria-hidden="true"></span>
+    						</div>
+    			      <input type="text" ng-model="searchTask" class="form-control" placeholder="">
+    			    </div>
+    				</div>
+
+    				<!-- TASK LIST -->
+            <a ng-repeat="task in tasks | filter: {title: searchTask, status: '!cancelled' } | orderBy: 'datetime':true" ng-href="#/browse/{{task.$id}}">
+    					<div class="list-group-item">
+    				        <div class="row-picture">
+    				            <img class="circle" ng-src="{{task.gravatar}}">
+    				        </div>
+    				        <div class="row-content">
+    				            <h4 class="list-group-item-heading">{{task.title | limitTo:25}}{{ task.title.length > 25? "..." : ""}}</h4>
+    				            <span class="list-group-item-text">
+    				            	<span am-time-ago="task.datetime"></span>
+    				            </span>
+    				        </div>
+    				        <div class="payment">
+    				        	<div>¢{{task.total}}</div>
+    				        	<span class="label status {{task.status}}">{{task.status}}</span>
+    				        </div>
+    				    </div>
+    			    	<div class="list-group-separator"></div>
+    		    	</a>
+    		</div>
+
+    	</div><!--End of Left pane-->
+
+
+	<!-- RIGHT PANEL -->
+	<div class="col-md-6 col-sm-6">
+		<!-- <div ng-show="listMode">
+			<img src="images/browse.jpg" class="img-responsive img-browse">
+		</div> -->
+    <div ng-show="listMode">
+			<img src="images/browse.jpg" class="img-responsive img-browse">
+		</div>
+
+		<div ng-show="!listMode">
+
+			<!-- HEADER -->
+			<div class="row">
+				<div class="col-md-8">
+          	<!-- <h3>Task title here </h3> -->
+					<h3>{{ selectedTask.title }}</h3>
+					<span>
+						<img ng-src="{{ selectedTask.gravatar }}" class="img-circle gravatar">
+            <!-- <img ng-src="" class="img-circle gravatar"> -->
+						Posted by {{selectedTask.name}} -
+            <!-- Posted by  Nabiy Py - -->
+						<span am-time-ago="selectedTask.datetime"></span>&nbsp;
+            	<!-- <span am-time-ago="1421840368791"></span>&nbsp; -->
+						<span class="label status {{selectedTask.status}}">{{ selectedTask.status }}</span>
+            <!-- <span class="label status open">open</span> -->
+					</span>
+				</div>
+
+				<div class="col-md-4 title">
+					<div class="price-tag">
+            <!-- ¢350 -->
+						¢{{ selectedTask.total }}
+
+            <div ng-show="isTaskCreator(selectedTask) && isOpen(selectedTask)">
+						<!-- <div ng-show="true"> -->
+							<div class="btn-group">
+							    <a href="" class="btn btn-warning btn-raised">Admin</a>
+							    <a href="" class="btn btn-warning btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							    <ul class="dropdown-menu">
+							        <li><a href="" data-toggle="modal" data-target="#ediModal"><i class="fa fa-pencil-square-o fa-2x"></i> Edit Task</a></li>
+							        <!-- <li class="divider"></li> -->
+							        <li><a href="" ng-click="cancelTask(selectedTask.$id)"><i class="fa fa-trash-o fa-2x"></i> Cancel Task</a></li>
+                      <!-- <li><a href="" ng-click=""><i class="fa fa-trash-o fa-2x"></i> Cancel Task</a></li> -->
+							    </ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- DESCRIPTION -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+					    <div class="panel-heading">
+					        <h3 class="panel-title">Description</h3>
+					    </div>
+					    <div class="panel-body">
+					        {{ selectedTask.description }}
+					    </div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+
+</div>
+
+
+  </div><!--End of row-->
+  <div ng-include="'modules/task/views/partials/edit.html'"></div>
+
+</div>

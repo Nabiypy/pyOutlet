@@ -1,0 +1,45 @@
+<div id="pasModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+    <div class="panel panel-material-orange-500 title">
+
+      <div class="panel-heading">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+          <span class="" aria-hidden="true">&times;</span>
+        </button>
+        <h1 class="panel-title">Change Password</h1>
+      </div>
+
+      <div class="panel-body">
+        <form ng-submit="changePassword(user)">
+          <input type="email"
+                  ng-model="user.email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                  ><br>
+          <input type="password"
+                  ng-model="user.oldPass"
+                  class="form-control"
+                  placeholder="Old Password"
+                  required
+                  ><br>
+          <input type="password"
+                  ng-model="user.newPass"
+                  class="form-control"
+                  placeholder="New Password"
+                  required
+                  ><br>
+
+          <input type="submit"
+                  class="btn btn-info btn-raised"
+                  value="Update task"
+                  >
+
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" ng-app="pymdl">
+  <head>
+    <meta charset="utf-8">
+    <title>pyOutlet Gh </title>
+    <meta name="description" content="An online and mobile marketplace that allows users to outsource small jobs and tasks to others in their neighbourhood.">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="images/favicon.png" media="all">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.9/toaster.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="styles/styles.css">
+
+  </head>
+  <body >
+    <!-- toaster notification-->
+    <toaster-container toaster-options="{'time-out' : 3000, 'close-button': true }"></toaster-container>
+    <navbar></navbar>
+
+    <div class="jumbotron">
+        <div ui-view></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-cookies.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-sanitize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-touch.min.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.9/toaster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.1/angular-moment.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/directives.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/services.js"></script>
+        <!-- main ngModule scripts-->
+    <script src="modules/main/mainModule.js"></script>
+    <script src="modules/main/js/controllers.js"></script>
+    <script src="modules/main/js/filters.js"></script>
+    <script src="modules/main/js/directives.js"></script>
+    <script src="modules/main/js/services.js"></script>
+         <!-- admin ngModule scripts-->
+    <script src="modules/admin/adminModule.js"></script>
+    <script src="modules/admin/js/controllers.js"></script>
+    <script src="modules/admin/js/filters.js"></script>
+    <script src="modules/admin/js/directives.js"></script>
+    <script src="modules/admin/js/services.js"></script>
+        <!-- about ngModule scripts -->
+    <script src="modules/about/aboutModule.js"></script>
+    <script src="modules/about/js/controllers.js"></script>
+    <script src="modules/about/js/filters.js"></script>
+    <script src="modules/about/js/directives.js"></script>
+    <script src="modules/about/js/services.js"></script>
+        <!-- task ngModule scripts -->
+    <script src="modules/task/tasksModule.js"></script>
+    <script src="modules/task/js/controllers.js"></script>
+    <script src="modules/task/js/filters.js"></script>
+    <script src="modules/task/js/directives.js"></script>
+    <script src="modules/task/js/services.js"></script>
+        <!-- location ngModule scripts -->
+    <script src="modules/location/locModule.js"></script>
+    <script src="modules/location/js/controllers.js"></script>
+    <script src="modules/location/js/filters.js"></script>
+    <script src="modules/location/js/directives.js"></script>
+    <script src="modules/location/js/services.js"></script>
+
+</body>
+</html>
